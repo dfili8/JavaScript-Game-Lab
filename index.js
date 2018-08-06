@@ -8,11 +8,12 @@ startGame();
 fightToTheDeath();
 
 function startGame(){
-    const playGame = prompt('Do you want to play?');
-    if(playGame === 'yes') {
+    const question = prompt('Do you want to play?');
+    const answer = question.toLowerCase();
+    if(answer === 'yes') {
         userName = prompt('Enter your name:');
     } else {
-
+        
     }
     return userName;
 }
