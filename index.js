@@ -1,21 +1,21 @@
-const opponentName = "Grant the Almighty Chicken";
+const opponentName = 'Grant the Almighty Chicken';
 let userName;
 let userHealthPoints = 40;
 let opponentHealthPoints = 10;
 let userWins = 0;
 
-startGame();
-fightToTheDeath();
+const question = prompt('Do you want to play?');
+const answer = question.toLowerCase();
+
+if(answer === 'yes'){
+    startGame();
+} else {
+    console.log('Try again!');
+}
 
 function startGame(){
-    const question = prompt('Do you want to play?');
-    const answer = question.toLowerCase();
-    if(answer === 'yes') {
-        userName = prompt('Enter your name:');
-    } else {
-        
-    }
-    return userName;
+    userName = prompt('Enter your name:');
+    fightToTheDeath();
 }
 
 function fightToTheDeath() {
